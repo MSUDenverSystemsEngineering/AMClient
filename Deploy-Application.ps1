@@ -145,7 +145,7 @@ Try {
         Copy-Item -Path "$dirSupportFiles\AMClient" -Destination "$envSystemDrive\Program Files" -Recurse
 
        
-        Copy-Item -Path "$dirSupportFiles\AMClient\UC4.lnk" -destination "$env:userprofile\Desktop" -Recurse
+        Copy-Item -Path "$dirSupportFiles\AMClient\UC4.lnk" -destination "$envPublic\Desktop" -Recurse
 
 
 		##*===============================================
