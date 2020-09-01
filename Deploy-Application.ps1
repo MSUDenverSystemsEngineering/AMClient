@@ -142,10 +142,10 @@ Try {
 
 		## <Perform Installation tasks here>
 
-        Copy-Item -Path "$dirSupportFiles\AMClient" -Destination "$envSystemDrive\Program Files" -Recurse
+        Copy-Item -Path "$dirtFiles\AMClient" -Destination "$envSystemDrive\Program Files" -Recurse
 
        
-        Copy-Item -Path "$dirSupportFiles\AMClient\UC4.lnk" -destination "$envPublic\Desktop" -Recurse
+        Copy-Item -Path "$dirFiles\UC4.lnk" -destination "$envPublic\Desktop" -Recurse
 
 
 		##*===============================================
@@ -188,7 +188,7 @@ Try {
 		}
 
 		# <Perform Uninstallation tasks here>
-        Remove-item -path "$env:userprofile\Desktop\UC4.lnk"
+        Remove-item -path "$envPublic\Desktop\UC4.lnk"
         Remove-Item -Path "C:\Program Files\AMClient" -Recurse
 
 
