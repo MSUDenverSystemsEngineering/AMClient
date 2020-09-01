@@ -142,10 +142,10 @@ Try {
 
 		## <Perform Installation tasks here>
 
-        Copy-Item -Path "$dirFiles\AMClient" -Destination "$envSystemDrive\Program Files" -Recurse
+        Copy-Item -Path "$dirSupportFiles\AMClient" -Destination "C:\Program Files" -Recurse
 
        
-        Copy-Item -Path "$dirFiles\UC4.lnk" -destination "$envPublic\Desktop" -Recurse
+        Copy-Item -Path "$dirSupportFiles\UC4.lnk" -destination "$envPublic\Desktop" -Recurse
 
 
 		##*===============================================
