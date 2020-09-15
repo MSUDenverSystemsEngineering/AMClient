@@ -145,7 +145,13 @@ Try {
         Copy-Item -Path "$dirSupportFiles\AMClient" -Destination "C:\Program Files" -Recurse
 
        
-        Copy-Item -Path "$dirSupportFiles\UC4.lnk" -destination "C:\Users\Public\Desktop" -Recurse
+        $TargetFile = "C:\Program Files\AMClient\RunClient.jar"
+	$ShortcutFile = "C:\Users\Public\Desktop\UC4.lnk"
+	$WScriptShell = New-Object -ComObject WScript.Shell
+	$Shortcut = $WScriptShell.CreateShortcut($ShortcutFile)
+	$Shortcut.TargetPath = $TargetFile = "C:\Program Files\AMClient\RunClient.jar"
+	$Shortcut.WorkingDirectory = "C:\Program Files\AMClient" 
+	$Shortcut.Save()
 
 
 		##*===============================================
