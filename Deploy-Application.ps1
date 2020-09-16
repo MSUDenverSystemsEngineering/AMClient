@@ -142,15 +142,15 @@ Try {
 
 		## <Perform Installation tasks here>
 
-        Copy-Item -Path "$dirSupportFiles\AMClient" -Destination "C:\Program Files" -Recurse
+        Copy-Item -Path "$dirSupportFiles\AMClient" -Destination "C:\" -Recurse
 
        
-        $TargetFile = "C:\Program Files\AMClient\RunClient.jar"
+        $TargetFile = "C:\AMClient\RunClient.jar"
 	$ShortcutFile = "C:\Users\Public\Desktop\UC4.lnk"
 	$WScriptShell = New-Object -ComObject WScript.Shell
 	$Shortcut = $WScriptShell.CreateShortcut($ShortcutFile)
-	$Shortcut.TargetPath = $TargetFile = "C:\Program Files\AMClient\RunClient.jar"
-	$Shortcut.WorkingDirectory = "C:\Program Files\AMClient" 
+	$Shortcut.TargetPath = $TargetFile = "C:\AMClient\RunClient.jar"
+	$Shortcut.WorkingDirectory = "C:\AMClient" 
 	$Shortcut.Save()
 
 
@@ -195,7 +195,7 @@ Try {
 
 		# <Perform Uninstallation tasks here>
         Remove-item -path "$envPublic\Desktop\UC4.lnk"
-        Remove-Item -Path "C:\Program Files\AMClient" -Recurse
+        Remove-Item -Path "C:\AMClient" -Recurse
 
 
 		##*===============================================
